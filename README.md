@@ -40,8 +40,8 @@ Get-UDDashboard | Stop-UDDashboard
 Start-UDDashboard -Port 10005 -Dashboard (
     New-UDDashboard -Title "Powershell UniversalDashboard" -Content {
         $MultiArray = @()
-        Get-Process | Sort-Object -Unique Name | Select-Object Name, @{Label = "Handles"; Expression = { [math]::Round($_.Handles, 1) } } | Export-Csv C:\UD\Test.csv -NoTypeInformation
-        Import-Csv C:\UD\Test.csv | % { $MultiArray += (, ($_.Name, $_.Handles)) }
+        Get-Process | Sort-Object -Unique Name | Select-Object Name, @{Label = "CPU"; Expression = { [math]::Round($_.CPU, 1) } } | Export-Csv C:\UD\Test.csv -NoTypeInformation
+        Import-Csv C:\UD\Test.csv | % { $MultiArray += (, ($_.Name, $_.CPU)) }
         New-UDLayout -Columns 2 -Content {
             New-GoogleHistogram -Data @($MultiArray) -Color 'green' -Title "Process usage by CPU"
         }
