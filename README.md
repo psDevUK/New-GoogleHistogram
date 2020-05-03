@@ -48,5 +48,6 @@ Start-UDDashboard -Port 10005 -Dashboard (
     }
 )
 ```
-
+![placeholder](https://raw.githubusercontent.com/psDevUK/New-GoogleHistogram/master/GoogleHistogram.gif
+"Demonstration Chart")
   Boom there you have it the Google Histogram Chart for UniversalDashboard
