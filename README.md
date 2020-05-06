@@ -26,6 +26,18 @@ This is a 2-dimensional-multi array which has to be passed, a name and a value, 
 * **-Color**
 Allows you to specify a string colour for the chart. The default is set to blue should you wish not to use this parameter
 
+## Version 1.0.1 Added Parameters
+Please note **-Color** is now **-Colors** in version 1.0.1
+* **-LegendPosition** A validateset to allow you to position the legend
+* **-TitleFontSize** Integer value to set the title font size
+* **-TitleFontColor** String value to set the title font colour
+* **-BackgroundColor** Sets the background colour of the chart via a string
+* **-Orientation** validateset to choose between horizontal and vertical defaulted to horizontal
+* **-ChartArea** Allows you to set the chart size via a percentage string as in "40%" or "80%" etc...
+
+Bit gutted from what I read animation was supported with this chart, however it did not work for me on firefox, so this does 
+also have animation parameters, but they didn't work for me :-(
+
 ## Demonstration
 
 Thought it would be good in this demo to show you how you can pull this information from a CSV file....for demo purposes I will
